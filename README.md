@@ -65,6 +65,10 @@ Note: the ChatGPT desktop app was formerly native (SwiftUI). The current unified
 
 The epicenter — the vast majority of agent-skin activity lives here. Codex shipped a native theme system in March 2026, which triggered a wave of third-party CDP-injection tools that go far beyond colors (full background images, "breathing face" UIs).
 
+<img src="https://raw.githubusercontent.com/Fei-Away/Codex-Dream-Skin/main/docs/images/gallery/skin-05.jpg" alt="MBTI persona skin for Codex" width="400"> <img src="https://raw.githubusercontent.com/Fei-Away/Codex-Dream-Skin/main/docs/images/screenshot-demo-art.png" alt="Light sci-fi skin for Codex" width="400">
+
+<sup>Persona-style and light-theme skins, from the Codex-Dream-Skin gallery (software MIT; visual assets carry their own rights).</sup>
+
 ### CDP Injection Skins and Tools
 
 - [Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin) - The origin project (5k+ stars in its first days). Loopback CDP injection gives Codex a full image-based "breathing face" without touching `.app` or `app.asar`. Reversible.
