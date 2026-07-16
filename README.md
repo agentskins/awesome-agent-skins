@@ -15,7 +15,7 @@ Your AI coding agent is the app you stare at for hours a day. **Agent skins** le
 - [Cursor](#cursor)
 - [Antigravity](#antigravity)
 - [Windsurf](#windsurf)
-- [Native Hosts: ChatGPT · Zed · Warp](#native-hosts-chatgpt--zed--warp)
+- [Native Hosts: Zed · Warp](#native-hosts-zed--warp)
 - [Cross-Host & Meta Projects](#cross-host--meta-projects)
 - [Injection Engines & Frameworks](#injection-engines--frameworks)
 - [Galleries & Marketplaces](#galleries--marketplaces)
@@ -35,12 +35,11 @@ There are **three distinct ways** to customize an agent desktop app. Conflating 
 
 | Host | Runtime | CDP Injection | Native Themes |
 |------|---------|---------------|---------------|
-| **Codex desktop** | Electron | ✅ (epicenter) | ✅ `codex-theme-v1` |
+| **ChatGPT/Codex desktop** | Electron (unified app, bundle `com.openai.codex`) | ✅ (epicenter) | ✅ Appearance / `codex-theme-v1` |
 | **Claude Desktop** | Electron | ✅ (mostly untapped) | ❌ |
 | **Cursor** | Electron (VS Code fork) | ✅ | ✅ VS Code themes |
 | **Antigravity** | Electron (VS Code fork) | ✅ | ✅ VS Code themes |
 | **Windsurf** | Electron (VS Code fork) | ✅ | ✅ VS Code themes |
-| **ChatGPT desktop** | Native (SwiftUI) | ❌ | ❌ OS appearance |
 | **Zed** | Native (Rust/GPUI) | ❌ | ✅ JSON themes |
 | **Warp** | Native (Rust) | ❌ | ✅ YAML themes |
 
@@ -98,17 +97,19 @@ VS Code fork. **Native themes only so far** — no injection tooling specific to
 
 VS Code fork. No dedicated skin engine — loader-based only ([vscode-custom-ui-style](https://github.com/subframe7536/vscode-custom-ui-style), [be5invis/vscode-custom-css](https://github.com/be5invis/vscode-custom-css) both work).
 
-## Native Hosts: ChatGPT · Zed · Warp
+## Native Hosts: Zed · Warp
 
 These are **not** Electron — CDP/CSS injection does **not** apply. Only native theme formats or OS-level tricks.
 
-- **ChatGPT Desktop** (SwiftUI/native) — no custom-theme system; follows OS appearance. Users wanting skins swap to an Electron wrapper (e.g. [vincelwt/chatgpt-mac](https://github.com/vincelwt/chatgpt-mac)).
 - **Zed** (Rust/GPUI) — rich native JSON theme ecosystem: [labithiotis/zed-themes](https://github.com/labithiotis/zed-themes) (explore/preview/edit), [huacnlee/zed-theme-macos-classic](https://github.com/huacnlee/zed-theme-macos-classic) ⭐~164, and many more on zed.dev extensions.
 - **Warp** (Rust) — native YAML theme system; community generators like [RLabs-Inc/rlabs](https://github.com/RLabs-Inc/rlabs).
+
+> Note: the ChatGPT desktop app was formerly native (SwiftUI). The current unified ChatGPT/Codex desktop app is Electron (`com.openai.codex`) — see the Codex section above.
 
 ## Cross-Host & Meta Projects
 
 - [arvinxx/agent-skin-skills](https://github.com/arvinxx/agent-skin-skills) — "One-click immersive skins for AI agent desktop apps — signature-safe CDP injection." Framed multi-host, currently Codex-only. The closest existing project to a universal agent-skin engine.
+- [joeynyc/hermes-skins](https://github.com/joeynyc/hermes-skins) ⭐~520 — Custom skins (visual themes) for the Hermes CLI agent: banner colors, spinners, labels, ASCII art. Proof the skin metaphor extends to terminal agents.
 
 ## Injection Engines & Frameworks
 
