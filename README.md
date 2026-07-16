@@ -169,6 +169,11 @@ The reusable substrates the tools above are built on, for people who want to bui
 
 - [Gorden_Sun on X](https://x.com/Gorden_Sun/status/2032843686682439909) - Announcement thread for Codex native reskin support (科技以换壳为本).
 - [servasyy_ai on X](https://x.com/servasyy_ai/status/2077559536760873301) - Thread from a developer whose paid skin-shop plan was pre-empted by the open-source Dream-Skin — the live commercial signal in this space.
+- [cnyzgkc on X](https://x.com/cnyzgkc/status/2077642188599759193) - The community meme ceiling: someone turned OpenAI's Codex into a solemn literary tribute to Anthropic's CEO.
+
+<img src="media/dario-tribute-skin.jpg" alt="Codex skinned as a literary tribute to Dario Amodei" width="600">
+
+<sup>Peak agent-skin meme culture. Screenshot via the linked post.</sup>
 
 ## Disambiguation
 
