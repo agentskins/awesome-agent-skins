@@ -8,7 +8,7 @@ Your AI coding agent is the app you stare at for hours a day. Agent skins let yo
 
 <img src="https://raw.githubusercontent.com/Fei-Away/Codex-Dream-Skin/main/docs/images/gallery/skin-03.jpg" alt="Codex desktop reskinned via CDP injection" width="800">
 
-<sup>Codex desktop reskinned at runtime. Image from the Codex-Dream-Skin project (MIT), listed below.</sup>
+<sup>Codex desktop reskinned at runtime. Screenshot from the Codex-Dream-Skin project (software MIT-licensed; the pictured visual assets carry their own separate rights).</sup>
 
 _Keywords: codex skin, codex 皮肤, cursor theme, claude desktop theme, agent themes, AI desktop customization._
 
@@ -23,6 +23,8 @@ _Keywords: codex skin, codex 皮肤, cursor theme, claude desktop theme, agent t
 - [Windsurf](#windsurf)
 - [Zed and Warp](#zed-and-warp)
 - [Cross-Host and Meta Projects](#cross-host-and-meta-projects)
+- [Pets, Avatars and Companions](#pets-avatars-and-companions)
+- [Cross-Host Authoring and Generators](#cross-host-authoring-and-generators)
 - [Injection Engines and Frameworks](#injection-engines-and-frameworks)
 - [Galleries and Marketplaces](#galleries-and-marketplaces)
 - [Discussions](#discussions)
@@ -48,7 +50,7 @@ How it works, in three flavors: **native theming** (the host's own theme system 
 | Host                  | Runtime                 | CDP Injection         | Native Themes          |
 | --------------------- | ----------------------- | --------------------- | ---------------------- |
 | ChatGPT/Codex desktop | Electron (unified app)  | Yes (epicenter)       | Yes (`codex-theme-v1`) |
-| Claude Desktop        | Electron                | Yes (mostly untapped) | No                     |
+| Claude Desktop        | Electron                | Limited (see notes)   | No                     |
 | Cursor                | Electron (VS Code fork) | Yes                   | Yes (VS Code themes)   |
 | Antigravity           | Electron (VS Code fork) | Yes                   | Yes (VS Code themes)   |
 | Windsurf              | Electron (VS Code fork) | Yes                   | Yes (VS Code themes)   |
@@ -73,6 +75,7 @@ The epicenter — the vast majority of agent-skin activity lives here. Codex shi
 - [z0rgoyok/codex-theme-controller](https://github.com/z0rgoyok/codex-theme-controller) - Utility for macOS applying color themes via CDP.
 - [fantuan-lab/codex-skin-market](https://github.com/fantuan-lab/codex-skin-market) - Nascent skin lab for macOS and Windows built on Dream-Skin.
 - [XVibeCoding/codex-skin-studio](https://github.com/XVibeCoding/codex-skin-studio) - Unofficial theme studio based on Dream-Skin (MIT).
+- [Finderchangchang/codex-autoskin](https://github.com/Finderchangchang/codex-autoskin) - Experimental: `theme.json` + art manifest and a `THEME-SPEC.md`, generates a theme from one image, CDP injection with reversible restore. Very new — validates the "generate a skin package" direction.
 
 Many smaller forks and Skills exist — open a PR to surface notable ones.
 
@@ -89,10 +92,11 @@ Many smaller forks and Skills exist — open a PR to surface notable ones.
 
 ## Claude Desktop
 
-Electron, so CDP injection is technically viable — but the space is almost untapped.
+Electron, so injection is technically possible — but the space is almost untapped. Note: recent Claude Desktop builds appear to restrict the remote-debugging flags CDP relies on, so a Codex-style CDP skin may need Electron-fuse/ASAR-level work (research territory, not a casual install). Claude Desktop itself ships only Light/System/Dark plus chat-font options. (Claude _Code_, the terminal app, has full official JSON themes — a different surface.)
 
 - [patrickjaja/claude-desktop-bin](https://github.com/patrickjaja/claude-desktop-bin) - Unofficial Linux packages (550+ stars) with a full custom-theme system injecting CSS via Electron `webContents.insertCSS()` on every WebContents, including the nested `claude.ai` iframe. Bundled themes directory. The closest Claude analog to Dream-Skin, but asar-patch and Linux-only.
-- [0326/Claude-Dream-Skin](https://github.com/0326/Claude-Dream-Skin) - Early placeholder attempt to port the Dream-Skin concept to Claude. No mature cross-platform CDP skin tool for Claude exists yet.
+
+No mature cross-platform CDP skin tool for Claude Desktop exists yet — the biggest open gap, pending confirmation of whether current builds can be injected at all.
 
 ## Cursor
 
@@ -104,9 +108,10 @@ VS Code fork — inherits a mature loader-based ecosystem. No bespoke Cursor ski
 
 ## Antigravity
 
-VS Code fork. Native themes only so far — no injection tooling specific to Antigravity, though generic VS Code loaders apply.
+Two distinct surfaces: the **Editor/IDE** is a VS Code fork (Open VSX, standard color/icon themes apply), while the **Desktop agent command center** is its own UI with no evidence that VS Code themes cover it. Native themes only so far — no injection tooling specific to Antigravity, though generic VS Code loaders apply to the Editor.
 
 - [nik-holo/montexia-theme](https://github.com/nik-holo/montexia-theme) - Dark theme targeting Cursor, Antigravity, and Windsurf.
+- [DavidBabel/antigravity-icons-supercharged](https://github.com/DavidBabel/antigravity-icons-supercharged) - Product icon theme for the Antigravity / VS Code family.
 - [Change Antigravity Theme Guide](https://agentpedia.codes/blog/change-antigravity-theme-guide) - Native theme and Open VSX install walkthrough.
 
 ## Windsurf
@@ -129,6 +134,21 @@ These hosts are not Electron, so CDP/CSS injection does not apply — only nativ
 - [joeynyc/hermes-skins](https://github.com/joeynyc/hermes-skins) - Custom skins (500+ stars) for the Hermes CLI agent — banner colors, spinners, labels, ASCII art. Proof the skin metaphor extends to terminal agents.
 - [Hermes Agent Skins Docs](https://hermes-agent.nousresearch.com/docs/user-guide/features/skins) - Official skins documentation for the Hermes agent — a first-party host embracing the skin concept.
 - [Skales](https://getskales.app/) - Local-first AI desktop agent shipping with built-in skins (Gecko, Bubbles, Capybara) — skins as a first-party feature.
+
+## Pets, Avatars and Companions
+
+A parallel branch of visual personalization: animated companions instead of full reskins. ChatGPT's official [Pets](https://learn.chatgpt.com/docs/pets) feature (a built-in `hatch-pet` skill that generates a companion from your description and saves it locally) proves the "generate and collect" model at the platform level.
+
+- [crafter-station/petdex](https://github.com/crafter-station/petdex) - Gallery, CLI, and desktop floater for AI agent pets (3k+ stars). Uses a `pet.json` + spritesheet package format with hatch/install/select/submit/doctor — the closest existing model for a skin gallery + generator + marketplace loop.
+
+## Cross-Host Authoring and Generators
+
+Tools that produce theme output for many hosts from one source — the "compile once, run everywhere" layer.
+
+- [mjswensen/themer](https://github.com/mjswensen/themer) - Generate VS Code, terminal, wallpaper, and more from one color set (5k+ stars). Note: third-party templates execute JS — do not run untrusted templates unsandboxed.
+- [Railly/tinte](https://github.com/Railly/tinte) - Compile a small set of OKLCH tokens to many editor/terminal formats, with preview and extraction.
+- [tinted-theming/schemes](https://github.com/tinted-theming/schemes) - Base16/Base24 intermediate palette corpus. (Aggregate license does not clear each upstream theme's rights.)
+- [catppuccin/userstyles](https://github.com/catppuccin/userstyles) - Web userstyles for ChatGPT, Claude, Gemini, Perplexity and more. Web CSS injection — separate from native desktop themes.
 
 ## Injection Engines and Frameworks
 
