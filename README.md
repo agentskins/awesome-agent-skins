@@ -67,7 +67,7 @@ The epicenter — the vast majority of agent-skin activity lives here. Codex shi
 
 ### CDP Injection Skins and Tools
 
-- [Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin) - The origin project (2.7k+ stars in days). Loopback CDP injection gives Codex a full image-based "breathing face" without touching `.app` or `app.asar`. Reversible.
+- [Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin) - The origin project (5k+ stars in its first days). Loopback CDP injection gives Codex a full image-based "breathing face" without touching `.app` or `app.asar`. Reversible.
 - [CodeDrobe/codex-skill](https://github.com/CodeDrobe/codex-skill) - Open-source theming Skill with an AI theme generator and cross-platform runtime.
 - [HeiGeAi/heige-codex-skin-studio](https://github.com/HeiGeAi/heige-codex-skin-studio) - One image equals one theme — one-click reskin for macOS with an in-app switcher menu.
 - [xnydl/codex-dream-skin](https://github.com/xnydl/codex-dream-skin) - Reskin Skill for macOS and Windows, distributed free by 世事宜AI.

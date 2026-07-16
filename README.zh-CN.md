@@ -61,7 +61,7 @@
 
 ### CDP 注入皮肤与工具
 
-- [Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin) - 源头项目（数日破 3k star）。Loopback CDP 注入给 Codex 换上完整图片皮肤，不碰 `.app` 和 `app.asar`，可还原。
+- [Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin) - 源头项目（数日破 5k star）。Loopback CDP 注入给 Codex 换上完整图片皮肤，不碰 `.app` 和 `app.asar`，可还原。
 - [CodeDrobe/codex-skill](https://github.com/CodeDrobe/codex-skill) - 开源换肤 Skill，带 AI 主题生成器和跨平台运行时。
 - [HeiGeAi/heige-codex-skin-studio](https://github.com/HeiGeAi/heige-codex-skin-studio) - "一张图=一个主题"，macOS 一键换肤，应用内切换菜单。
 - [xnydl/codex-dream-skin](https://github.com/xnydl/codex-dream-skin) - macOS 和 Windows 换肤 Skill，世事宜AI 免费分发。
