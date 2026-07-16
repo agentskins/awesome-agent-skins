@@ -1,10 +1,12 @@
 # Awesome Agent Skins [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> A curated list of skins, themes, and theming tools for AI agent desktop apps — Codex, Claude Desktop, Cursor, Antigravity, and more.
+> A curated list of skins, themes, and theming tools for AI agent desktop apps — ChatGPT/Codex, Claude, Cursor, Antigravity, and more.
 
 English | [简体中文](README.zh-CN.md)
 
-Your AI coding agent is the app you stare at for hours a day. Agent skins let you re-skin its interface — colors, wallpapers, characters, whole visual identities — without touching the official binary or your API config.
+Your AI agent is the app you stare at for hours a day. Agent skins let you re-skin its interface — colors, wallpapers, characters, whole visual identities — without touching the official binary or your API config.
+
+Scope: this list is about **AI agents** — coding agents (Codex, Claude, Cursor, Antigravity, Windsurf) first, then the broader AI assistant desktops. It is not a general editor-theming or terminal-theming list; every entry helps you skin an AI agent.
 
 <img src="https://raw.githubusercontent.com/Fei-Away/Codex-Dream-Skin/main/docs/images/gallery/skin-03.jpg" alt="Codex desktop reskinned via CDP injection" width="800">
 
@@ -24,7 +26,7 @@ _Keywords: codex skin, codex 皮肤, cursor theme, claude desktop theme, agent t
 - [Zed and Warp](#zed-and-warp)
 - [Cross-Host and Meta Projects](#cross-host-and-meta-projects)
 - [Pets, Avatars and Companions](#pets-avatars-and-companions)
-- [Cross-Host Authoring and Generators](#cross-host-authoring-and-generators)
+- [Web Agents (Userstyles)](#web-agents-userstyles)
 - [Injection Engines and Frameworks](#injection-engines-and-frameworks)
 - [Galleries and Marketplaces](#galleries-and-marketplaces)
 - [Discussions](#discussions)
@@ -47,15 +49,15 @@ How it works, in three flavors: **native theming** (the host's own theme system 
 
 ## Host Apps at a Glance
 
-| Host                  | Runtime                 | CDP Injection         | Native Themes          |
-| --------------------- | ----------------------- | --------------------- | ---------------------- |
-| ChatGPT/Codex desktop | Electron (unified app)  | Yes (epicenter)       | Yes (`codex-theme-v1`) |
-| Claude Desktop        | Electron                | Limited (see notes)   | No                     |
-| Cursor                | Electron (VS Code fork) | Yes                   | Yes (VS Code themes)   |
-| Antigravity           | Electron (VS Code fork) | Yes                   | Yes (VS Code themes)   |
-| Windsurf              | Electron (VS Code fork) | Yes                   | Yes (VS Code themes)   |
-| Zed                   | Native (Rust/GPUI)      | No                    | Yes (JSON themes)      |
-| Warp                  | Native (Rust)           | No                    | Yes (YAML themes)      |
+| Host                  | Runtime                 | CDP Injection       | Native Themes          |
+| --------------------- | ----------------------- | ------------------- | ---------------------- |
+| ChatGPT/Codex desktop | Electron (unified app)  | Yes (epicenter)     | Yes (`codex-theme-v1`) |
+| Claude Desktop        | Electron                | Limited (see notes) | No                     |
+| Cursor                | Electron (VS Code fork) | Yes                 | Yes (VS Code themes)   |
+| Antigravity           | Electron (VS Code fork) | Yes                 | Yes (VS Code themes)   |
+| Windsurf              | Electron (VS Code fork) | Yes                 | Yes (VS Code themes)   |
+| Zed                   | Native (Rust/GPUI)      | No                  | Yes (JSON themes)      |
+| Warp                  | Native (Rust)           | No                  | Yes (YAML themes)      |
 
 Note: the ChatGPT desktop app was formerly native (SwiftUI). The current unified ChatGPT/Codex desktop app is Electron (bundle `com.openai.codex`), so CDP injection applies.
 
@@ -141,22 +143,18 @@ A parallel branch of visual personalization: animated companions instead of full
 
 - [crafter-station/petdex](https://github.com/crafter-station/petdex) - Gallery, CLI, and desktop floater for AI agent pets (3k+ stars). Uses a `pet.json` + spritesheet package format with hatch/install/select/submit/doctor — the closest existing model for a skin gallery + generator + marketplace loop.
 
-## Cross-Host Authoring and Generators
+## Web Agents (Userstyles)
 
-Tools that produce theme output for many hosts from one source — the "compile once, run everywhere" layer.
+The browser versions of the AI chat agents can be reskinned with userstyles (Stylus/userContent CSS).
 
-- [mjswensen/themer](https://github.com/mjswensen/themer) - Generate VS Code, terminal, wallpaper, and more from one color set (5k+ stars). Note: third-party templates execute JS — do not run untrusted templates unsandboxed.
-- [Railly/tinte](https://github.com/Railly/tinte) - Compile a small set of OKLCH tokens to many editor/terminal formats, with preview and extraction.
-- [tinted-theming/schemes](https://github.com/tinted-theming/schemes) - Base16/Base24 intermediate palette corpus. (Aggregate license does not clear each upstream theme's rights.)
-- [catppuccin/userstyles](https://github.com/catppuccin/userstyles) - Web userstyles for ChatGPT, Claude, Gemini, Perplexity and more. Web CSS injection — separate from native desktop themes.
+- [catppuccin/userstyles](https://github.com/catppuccin/userstyles) - Userstyles for ChatGPT, Claude, Gemini, Perplexity and more. Web CSS injection — separate from native desktop themes.
 
 ## Injection Engines and Frameworks
 
-The reusable substrates skin tools are built on. The CDP approach launches an Electron app with `--remote-debugging-port` bound to loopback and drives it over the Chrome DevTools Protocol — the mechanism behind Dream-Skin and its descendants. The asar-patch approach injects CSS via Electron `webContents.insertCSS()` (used by claude-desktop-bin). VS Code-family loaders patch `workbench.html` instead.
+The reusable substrates the tools above are built on, for people who want to build their own. The CDP approach launches the agent's Electron app with `--remote-debugging-port` bound to loopback and drives it over the Chrome DevTools Protocol — the mechanism behind Dream-Skin and its descendants. The asar-patch approach injects CSS via Electron `webContents.insertCSS()` (used by claude-desktop-bin). VS Code-family loaders patch `workbench.html` instead.
 
-- [magicdawn/vsc-custom-css-cli](https://github.com/magicdawn/vsc-custom-css-cli) - CLI patcher equivalent of the VS Code custom-CSS loaders.
-- [KemonoServal/electron-inject-dark-slack](https://github.com/KemonoServal/electron-inject-dark-slack) - Inject CSS into Slack — prior art for the whole Electron-reskin category, alongside BetterDiscord.
-- [Codex++ Writeup](https://we0.ai/articles/codex-plus-plus-tutorial-codex-desktop-enhancement) - Third-party launcher injecting behavioral enhancements via the same CDP substrate (Tauri/React plus user scripts).
+- [magicdawn/vsc-custom-css-cli](https://github.com/magicdawn/vsc-custom-css-cli) - CLI patcher equivalent of the VS Code custom-CSS loaders, for skinning Cursor/Windsurf/Antigravity.
+- [Codex++ Writeup](https://we0.ai/articles/codex-plus-plus-tutorial-codex-desktop-enhancement) - Third-party launcher injecting behavioral enhancements into Codex via the same CDP substrate (Tauri/React plus user scripts).
 
 ## Galleries and Marketplaces
 
