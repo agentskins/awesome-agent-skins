@@ -2,14 +2,17 @@
 
 > A curated list of skins, themes, and theming tools for AI agent desktop apps — Codex, Claude Desktop, Cursor, Antigravity, and more.
 
-Your AI coding agent is the app you stare at for hours a day. Agent skins let you re-skin its interface — colors, wallpapers, characters, whole visual identities — without touching the official binary or your API config. This list tracks skins, theme collections, injection engines, galleries, and guides across the ecosystem.
+Your AI coding agent is the app you stare at for hours a day. Agent skins let you re-skin its interface — colors, wallpapers, characters, whole visual identities — without touching the official binary or your API config.
 
-There are three distinct ways to customize an agent desktop app, and this list labels them explicitly. **Native theming** means the host ships its own theme system (config strings, JSON, `.tmTheme`) — no injection involved. **CDP injection** means an external tool launches the Electron app with a loopback remote-debugging port and injects CSS/JS/images at runtime via the Chrome DevTools Protocol — no file or `.asar` modification, fully reversible, and only possible on Electron/Chromium hosts. **Loader injection** means a VS Code-family extension patches `workbench.html` to load custom CSS/JS.
+<img src="https://raw.githubusercontent.com/Fei-Away/Codex-Dream-Skin/main/docs/images/gallery/skin-03.jpg" alt="Codex desktop reskinned via CDP injection" width="800">
 
-*Keywords: codex skin, codex 皮肤, cursor theme, claude desktop theme, agent themes, AI desktop customization.*
+<sup>Codex desktop reskinned at runtime. Image from the Codex-Dream-Skin project (MIT), listed below.</sup>
+
+_Keywords: codex skin, codex 皮肤, cursor theme, claude desktop theme, agent themes, AI desktop customization._
 
 ## Contents
 
+- [Start Here](#start-here)
 - [Host Apps at a Glance](#host-apps-at-a-glance)
 - [Codex](#codex)
 - [Claude Desktop](#claude-desktop)
@@ -23,6 +26,20 @@ There are three distinct ways to customize an agent desktop app, and this list l
 - [Discussions](#discussions)
 - [Disambiguation](#disambiguation)
 - [Gaps and Opportunities](#gaps-and-opportunities)
+
+## Start Here
+
+Pick your app, get skinning in one minute. Names below are plain text — each links from its host section further down.
+
+| You use…          | Do this                                                                                       |
+| ----------------- | --------------------------------------------------------------------------------------------- |
+| Codex desktop     | Install Codex-Dream-Skin for full image skins, or import a native theme string from DexThemes |
+| Claude Desktop    | Nothing mature exists yet (one Linux-only option) — the biggest open gap in the ecosystem     |
+| Cursor / Windsurf | Install vscode-custom-ui-style for backgrounds and custom CSS, or any VS Code color theme     |
+| Antigravity       | Any VS Code color theme via Open VSX — guide linked in the Antigravity section                |
+| Zed / Warp        | Native theme galleries only — no injection applies                                            |
+
+How it works, in three flavors: **native theming** (the host's own theme system — config strings, JSON, `.tmTheme`), **CDP injection** (launch the Electron app with a loopback debug port, inject CSS/images at runtime — no file modification, fully reversible), and **loader injection** (a VS Code-family extension patches `workbench.html`). Every entry below is labeled with its approach.
 
 ## Host Apps at a Glance
 
@@ -108,6 +125,8 @@ These hosts are not Electron, so CDP/CSS injection does not apply — only nativ
 
 - [arvinxx/agent-skin-skills](https://github.com/arvinxx/agent-skin-skills) - One-click immersive skins for AI agent desktop apps via signature-safe CDP injection. Framed multi-host, currently Codex-only — the closest existing project to a universal agent-skin engine.
 - [joeynyc/hermes-skins](https://github.com/joeynyc/hermes-skins) - Custom skins (500+ stars) for the Hermes CLI agent — banner colors, spinners, labels, ASCII art. Proof the skin metaphor extends to terminal agents.
+- [Hermes Agent Skins Docs](https://hermes-agent.nousresearch.com/docs/user-guide/features/skins) - Official skins documentation for the Hermes agent — a first-party host embracing the skin concept.
+- [Skales](https://getskales.app/) - Local-first AI desktop agent shipping with built-in skins (Gecko, Bubbles, Capybara) — skins as a first-party feature.
 
 ## Injection Engines and Frameworks
 
