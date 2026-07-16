@@ -2,6 +2,8 @@
 
 > A curated list of skins, themes, and theming tools for AI agent desktop apps — Codex, Claude Desktop, Cursor, Antigravity, and more.
 
+English | [简体中文](README.zh-CN.md)
+
 Your AI coding agent is the app you stare at for hours a day. Agent skins let you re-skin its interface — colors, wallpapers, characters, whole visual identities — without touching the official binary or your API config.
 
 <img src="https://raw.githubusercontent.com/Fei-Away/Codex-Dream-Skin/main/docs/images/gallery/skin-03.jpg" alt="Codex desktop reskinned via CDP injection" width="800">
