@@ -64,8 +64,9 @@
 震中——绝大多数 agent 换肤活动都在这里。Codex 于 2026 年 3 月上线原生主题系统，随后引爆了一波远超调色范畴的第三方 CDP 注入工具（完整背景图、"会呼吸的脸"）。
 
 <img src="https://raw.githubusercontent.com/Fei-Away/Codex-Dream-Skin/main/docs/images/gallery/skin-05.jpg" alt="Codex 的 MBTI 人格皮肤" width="400"> <img src="https://raw.githubusercontent.com/Fei-Away/Codex-Dream-Skin/main/docs/images/screenshot-demo-art.png" alt="Codex 的浅色科幻皮肤" width="400">
+<img src="https://raw.githubusercontent.com/Fei-Away/Codex-Dream-Skin/main/docs/images/screenshot-macos-home.png" alt="Codex 的瑞克与莫蒂传送门皮肤" width="400">
 
-<sup>人格风与浅色主题皮肤，来自 Codex-Dream-Skin 图库（软件 MIT；视觉素材权利另行核验）。</sup>
+<sup>人格风、浅色与全同人风皮肤，来自 Codex-Dream-Skin 图库（软件 MIT；视觉素材权利另行核验）。</sup>
 
 ### CDP 注入皮肤与工具
 
